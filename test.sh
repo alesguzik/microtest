@@ -1,6 +1,6 @@
 #!/bin/bash
 [ -e "t.conf" ] && . t.conf
-TESTS=$(find -mindepth 1 -maxdepth 1 -type d|sed 's/^\.\///')
+TESTS=$(find -mindepth 1 -maxdepth 1 -type d|sed 's/^\.\///'|grep -v '^\.')
 TOTAL=$(IFS="\n" echo "$TESTS"|wc -l)
 CURRENT=1
 TOTAL_VALID=0
