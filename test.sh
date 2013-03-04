@@ -9,7 +9,7 @@ FAILED=0
 PENDING=0
 echo "Running tests:"
 for test in $TESTS; do
-  echo -e -n "${CURRENT}. ${test} : "
+  echo -e -n "${CURRENT}. \033[4m${test}\033[0m : "
   CURRENT=$((CURRENT+1))
   if [ -e "${test}/out" ]; then
     ( echo -n "$PREPEND";
